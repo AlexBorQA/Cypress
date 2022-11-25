@@ -17,11 +17,11 @@ it('Позитивный кейс: верный логин, верный пар�
 it('Негативный кейс: верный логин, неверный пароль', function () {
         cy.get('button.profile__nav-link').click();
         cy.get('.box__button_ok > .s-button__content').click();
-cy.get('.header-bottom__right--link').click();
-cy.get('.auth-form > form > [type="email"]').type('s_ivanov2018@mail.ru');
+        cy.get('.header-bottom__right--link').click();
+        cy.get('.auth-form > form > [type="email"]').type('s_ivanov2018@mail.ru');
         cy.get('.auth-form > form > [type="password"]').type('Rgb@528659');
         cy.get('.auth-form__submit > .s-button__content').click();
-cy.contains('Невозможно войти с предоставленными учетными данными.');
+        cy.contains('Невозможно войти с предоставленными учетными данными.');
 
 })
 
